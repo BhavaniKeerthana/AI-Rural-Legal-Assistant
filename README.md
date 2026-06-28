@@ -156,7 +156,3 @@ B.Tech – Artificial Intelligence and Data Science
 Velammal Engineering College
 
 ---
-
-## 📄 License
-
-This project is developed for educational and academic purposes.
