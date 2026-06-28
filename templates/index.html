@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Rural Legal Assistant</title>
+
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>⚖️ AI Rural Legal Assistant</h1>
+    <div class="banner">
+    Property Disputes • Consumer Complaints • Cybercrime • Government Services
+</div>
+
+    <!-- Chat Section -->
+
+    <div class="chat-container">
+
+        <div id="messages" class="messages"></div>
+
+        <div class="input-area">
+
+            <input
+                type="text"
+                id="question"
+                placeholder="Ask your legal question...">
+
+            <button onclick="askQuestion()">
+                Ask
+            </button>
+
+            <button onclick="startVoice()">
+                🎤 Speak
+            </button>
+
+        </div>
+
+    </div>
+
+    <hr>
+
+    <!-- Translation -->
+
+    <h2>🌐 Translate Text</h2>
+
+    <textarea
+        id="translateText"
+        placeholder="Enter text to translate">
+    </textarea>
+
+    <br>
+
+    <select id="language">
+        <option value="ta">Tamil</option>
+        <option value="hi">Hindi</option>
+        <option value="te">Telugu</option>
+        <option value="en">English</option>
+    </select>
+
+    <button onclick="translateText()">
+        Translate
+    </button>
+
+    <p id="translatedResult"></p>
+
+    <hr>
+
+    <!-- Complaint Generator -->
+
+    <h2>📝 Complaint Generator</h2>
+
+    <input
+        type="text"
+        id="name"
+        placeholder="Enter your name">
+
+    <br><br>
+
+    <textarea
+        id="issue"
+        placeholder="Describe your issue">
+    </textarea>
+
+    <br>
+
+    <button onclick="generateComplaint()">
+        Generate Complaint
+    </button>
+
+    <pre id="complaintResult"></pre>
+
+    <hr>
+
+    <a href="/admin" target="_blank">
+        📊 Open Admin Dashboard
+    </a>
+
+</div>
+
+<script src="/static/script.js"></script>
+
+</body>
+</html>

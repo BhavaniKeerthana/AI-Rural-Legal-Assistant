@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Admin Dashboard</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+
+    <h1>AI Rural Legal Assistant - Admin Dashboard</h1>
+
+    <div class="dashboard">
+
+        <div class="card">
+            <h2>Total Queries</h2>
+            <p id="totalQueries">{{ total_queries }}</p>
+        </div>
+
+        <div class="card">
+            <h2>Property Dispute</h2>
+            <p>{{ property_count }}</p>
+        </div>
+
+        <div class="card">
+            <h2>Consumer Complaint</h2>
+            <p>{{ consumer_count }}</p>
+        </div>
+
+        <div class="card">
+            <h2>Cybercrime</h2>
+            <p>{{ cybercrime_count }}</p>
+        </div>
+
+        <div class="card">
+            <h2>Government Services</h2>
+            <p>{{ government_count }}</p>
+        </div>
+
+    </div>
+
+    <h2>Recent Queries</h2>
+
+    <table border="1">
+
+        <tr>
+            <th>ID</th>
+            <th>Question</th>
+            <th>Category</th>
+            <th>Date</th>
+        </tr>
+
+        {% for row in chats %}
+
+        <tr>
+            <td>{{ row[0] }}</td>
+            <td>{{ row[1] }}</td>
+            <td>{{ row[3] }}</td>
+            <td>{{ row[4] }}</td>
+        </tr>
+
+        {% endfor %}
+
+    </table>
+
+</body>
+</html>
